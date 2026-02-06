@@ -5,7 +5,6 @@ import subprocess
 from tqdm import tqdm  
 
 def obter_tamanho_pasta(caminho):
-    """Calcula o tamanho total de uma pasta em Bytes."""
     total = 0
     try:
         for dirpath, dirnames, filenames in os.walk(caminho):
