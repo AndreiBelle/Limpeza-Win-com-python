@@ -51,7 +51,9 @@ def menu_principal():
         print("="*35)
         print("1. Limpeza Rápida (Pastas Temp)")
         print("2. Abrir Limpeza de Disco do Windows")
-        print("3. Sair")
+        print("3. Reinicializar a máquina para finalizar processos e liberar Memórias em Cache")
+        print("4. Sair")
+        
         print("="*35)
         
         escolha = input("\nEscolha uma opção: ")
@@ -65,10 +67,18 @@ def menu_principal():
             
         elif escolha == '2':
             print("\nAbrindo ferramenta oficial da Microsoft...")
-            print("Ao abrir a ferramente clique em OK e depois EXCLUIR ARQUIVOS")
+            print("* Selecione todas as caixinhas que aparecer")
+            print("* Clique em OK e depois EXCLUIR ARQUIVOS")
+            print("* Aguarde até finalizar, a pequena janelinha que abrir vai fechar sozinha")
             subprocess.run(["cleanmgr", "/d", "C"])
-            
-        elif escolha == '3':
+
+        elif escolha == "3":
+            print("SALVE TODOS OS TRABALHOS PENDENTES!!")
+            print("Sua máquina será reiniciada em 30 segundos, salve seus trabalhos conforme necessário!")
+            print("SALVE TODOS OS TRABALHOS PENDENTES!!")
+            subprocess.run(["shutdown", "/r", "/t", "30"])
+
+        elif escolha == '4':
             break
         
         input("\nPresione Enter para continuar...")
