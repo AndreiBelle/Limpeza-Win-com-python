@@ -65,6 +65,7 @@ def menu_principal():
             
         elif escolha == '2':
             print("\nAbrindo ferramenta oficial da Microsoft...")
+            print("Ao abrir a ferramente clique em OK e depois EXCLUIR ARQUIVOS")
             subprocess.run(["cleanmgr", "/d", "C"])
             
         elif escolha == '3':
